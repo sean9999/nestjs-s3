@@ -3,6 +3,11 @@ import * as AWS from 'aws-sdk/global';
 import * as S3 from 'aws-sdk/clients/s3';
 import * as https from 'https';
 
+const defaultEndpoint = (options: S3ConfigOptions): string => {
+    const region = options.region || 'us-east-1';
+    return `https://s3.${region}.amazonaws.com`;
+};
+
 export function createS3Client(options: S3ConfigOptions): S3 {
     AWS.config.update({
         accessKeyId: options.accessKeyId,
@@ -22,7 +27,7 @@ export function createS3Client(options: S3ConfigOptions): S3 {
     let version = options.apiVersion === undefined ? '2006-03-01' : options.apiVersion;
     let params: S3.ClientConfiguration = {
         apiVersion: version,
-        endpoint: options.endpoint
+        endpoint: options.endpoint || defaultEndpoint(options)
     };
     const client = new S3(params);
     return client;
