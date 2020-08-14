@@ -7,6 +7,7 @@ export interface S3ConfigOptions {
     sessionToken?: string;
     apiVersion?: string;
     maxSockets?: number;
+    endpoint?: string;
 }
 
 export interface S3ConfigOptionsFactory {

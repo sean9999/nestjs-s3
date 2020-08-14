@@ -13,7 +13,7 @@
   ],
   "name": "@ntegral/nestjs-s3",
   "version": "1.0.3",
-  "description": "Provides an injectable s3 client to provide s3 storage access from nestjs modules",
+  "description": "Provides an injectable s3 client to provide s3 storage access from nestjs modules. Works with compatible services like Dell ECS",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "repository": {
@@ -33,8 +33,7 @@
   "keywords": [
     "nestjs",
     "s3",
-    "dell",
-    "ecs",
+    "dell ecs",
     "aws",
     "node.js"
   ],
