@@ -11,14 +11,14 @@
       "url": "https://technainstitute.com"
     }
   ],
-  "name": "@ntegral/nestjs-s3",
-  "version": "1.0.3",
+  "name": "@sean9999/nestjs-s3",
+  "version": "1.0.4",
   "description": "Provides an injectable s3 client to provide s3 storage access from nestjs modules. Works with compatible services like Dell ECS",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ntegral/nestjs-s3"
+    "url": "git+https://github.com/sean9999/nestjs-s3"
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
