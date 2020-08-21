@@ -61,6 +61,7 @@
     "typescript": "^3.9.7"
   },
   "dependencies": {
+    "@sean9999/nestjs-s3": "git+https://github.com/sean9999/nestjs-s3.git",
     "aws-sdk": "^2.624.0"
   },
   "jest": {
