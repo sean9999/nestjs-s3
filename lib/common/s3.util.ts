@@ -24,10 +24,11 @@ export function createS3Client(options: S3ConfigOptions): S3 {
             }
         });
     }
-    let version = options.apiVersion === undefined ? '2006-03-01' : options.apiVersion;
+    let apiVersion = options.apiVersion === undefined ? '2006-03-01' : options.apiVersion;
+    let endpoint = options.endpoint || defaultEndpoint(options);
     let params: S3.ClientConfiguration = {
-        apiVersion: version,
-        endpoint: options.endpoint || defaultEndpoint(options)
+        apiVersion,
+        endpoint
     };
     const client = new S3(params);
     return client;
